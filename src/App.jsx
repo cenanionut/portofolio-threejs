@@ -6,6 +6,7 @@ import Contact from './sections/Contact.jsx';
 import Clients from './sections/Clients.jsx';
 import Projects from './sections/Projects.jsx';
 import WorkExperience from './sections/Experience.jsx';
+import Certificates from './sections/Certificates.jsx';
 
 const App = () => {
   return (
@@ -14,9 +15,10 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
-      <Clients />
+      {/* <Clients /> */}
       <WorkExperience />
-      <Contact />
+      <Certificates />
+      {/* <Contact /> */}
       <Footer />
     </main>
   );

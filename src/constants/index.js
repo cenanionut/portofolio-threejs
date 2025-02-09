@@ -1,3 +1,5 @@
+import { Glitch } from '@react-three/postprocessing';
+
 export const navLinks = [
   {
     id: 1,
@@ -21,50 +23,135 @@ export const navLinks = [
   },
 ];
 
-export const clientReviews = [
-  {
-    id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-  },
-  {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
-  {
-    id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-  },
-];
+export const clientReviews = [];
 
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'Yelpcamp - Search the nearest campground',
+    desc: 'A web application built as part of "The Web Developer Bootcamp 2024" course on Udemy. Yelpcamp is a camp review platform that allows users to search for, create, and rate camping locations.',
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+      'Features: User authentication (Sign Up, Log In); CRUD functionality for campsites; Image uploads with Cloudinary integration; Dynamic views with EJS templating engine',
+    href: 'https://cnnyelpcamp.onrender.com',
+    github: 'https://github.com/cenanionut/yelpcamp',
+    texture: '/textures/project/new_project1.mp4',
+    logo: '/assets/project-logo_new1.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'JavaScript',
+        path: '/assets/javascript.png',
+      },
+      {
+        id: 2,
+        name: 'CSS',
+        path: 'assets/css.png',
+      },
+      {
+        id: 3,
+        name: 'Node.js',
+        path: '/assets/node.png',
+      },
+      {
+        id: 4,
+        name: 'MongoDB',
+        path: '/assets/mongodb.png',
+      },
+    ],
+  },
+  {
+    title: 'Intelligent Solar Panel System',
+    desc: 'Bachelor\'s Thesis: "Development of an Intelligent Solar Panel System". The project aims to optimize the energy production of solar panels.',
+    subdesc:
+      'Once logged in, users can view real-time electrical data related to their equipment, including voltage, current intensity, current power, and stored/saved energy.',
+    href: 'https://solarpowercnn.web.app',
+    github: 'https://github.com/cenanionut/solarpower',
+    texture: '/textures/project/new_project2.mp4',
+    logo: '/assets/solar-panel.png',
+    logoStyle: {
+      backgroundColor: '#13202F',
+      border: '0.2px solid #17293E',
+      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+    },
+    spotlight: '/assets/spotlight2.png',
+    tags: [
+      {
+        id: 1,
+        name: 'JavaScript',
+        path: '/assets/javascript.png',
+      },
+      {
+        id: 2,
+        name: 'Bootstrap',
+        path: 'assets/bootstrap.png',
+      },
+      {
+        id: 3,
+        name: 'Firebase',
+        path: '/assets/firebase.png',
+      },
+      {
+        id: 4,
+        name: 'Arduino',
+        path: '/assets/arduino.png',
+      },
+    ],
+  },
+  {
+    title: 'Kitchen - Culinary Design Showcase',
+    desc: 'A visually engaging platform highlighting creative CSS animations and web design. It brings culinary themes to life with seamless animations, dynamic styling, and intuitive interactions.',
+    subdesc:
+      'Built with precision, Kitchen integrates SCSS, JavaScript, and Firebase Hosting to create an immersive and responsive user experience, showcasing the power of modern web development tools.',
+
+    href: 'https://cnn-kitchen.web.app',
+    github: 'https://github.com/cenanionut/kitchen',
+    texture: '/textures/project/new_project3.mp4',
+    logo: '/assets/chef.png',
+    logoStyle: {
+      backgroundColor: '#60f5a1',
+      background:
+        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+      border: '0.2px solid rgba(208, 213, 221, 1)',
+      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+    },
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'SASS',
+        path: '/assets/sass.png',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+        path: '/assets/javascript.png',
+      },
+      {
+        id: 3,
+        name: 'HTML',
+        path: '/assets/html.png',
+      },
+      {
+        id: 4,
+        name: 'Firebase',
+        path: '/assets/firebase.png',
+      },
+    ],
+  },
+  {
+    title: 'Build your own burger',
+    desc: 'A web application that allows the user to order a custom burger by selecting ingredients through the graphical interface. After signing in and logging in, the user can access order history and the status of active orders.',
+    subdesc:
+      'A web application developed using React.js as part of the Udemy course - React The Complete Guide, with Firebase as the backend.',
+    href: 'https://react-my-burger-82051.web.app/',
+
+    texture: '/textures/project/new_project4.mp4',
+    logo: '/assets/burger.png',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -79,168 +166,13 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'CSS',
+        path: 'assets/css.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-    subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
-    logoStyle: {
-      backgroundColor: '#13202F',
-      border: '0.2px solid #17293E',
-      boxShadow: '0px 0px 60px 0px #2F6DB54D',
-    },
-    spotlight: '/assets/spotlight2.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-    texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
-    logoStyle: {
-      backgroundColor: '#60f5a1',
-      background:
-        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-      border: '0.2px solid rgba(208, 213, 221, 1)',
-      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-    },
-    spotlight: '/assets/spotlight3.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
-    },
-    spotlight: '/assets/spotlight4.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
-    logoStyle: {
-      backgroundColor: '#1C1A43',
-      border: '0.2px solid #252262',
-      boxShadow: '0px 0px 60px 0px #635BFF4D',
-    },
-    spotlight: '/assets/spotlight5.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Firebase',
+        path: '/assets/firebase.png',
       },
     ],
   },
@@ -250,39 +182,129 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [15, -12, 0],
     reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-20, 10, 0],
+    targetPosition: isSmall ? [-5, -8, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -20, -10],
   };
 };
 
 export const workExperiences = [
   {
     id: 1,
-    name: 'Framer',
-    pos: 'Lead Web Developer',
-    duration: '2022 - Present',
-    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: '/assets/framer.svg',
+    name: 'Endava',
+    pos: 'Web Developer',
+    duration: '2021 - Present',
+    title:
+      'Experienced Application Management Engineer skilled in web development, debugging, Agile, delivering new products, maintaining existing ones, and continuously learning technologies.',
+    icon: '/assets/DAVA.png',
     animation: 'victory',
   },
   {
     id: 2,
-    name: 'Figma',
-    pos: 'Web Developer',
-    duration: '2020 - 2022',
-    title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: '/assets/figma.svg',
+    name: 'Ultratech Int',
+    pos: 'Electronic Technician',
+    duration: '2021',
+    title:
+      'Repaired industrial electronic machines, specialized in Human Machine Interfaces, maintained power inverters, implemented preventative measures, and mentored new colleagues to ensure optimal performance and minimal downtime.',
+    icon: '/assets/ultra.png',
     animation: 'clapping',
   },
   {
     id: 3,
-    name: 'Notion',
-    pos: 'Junior Web Developer',
-    duration: '2019 - 2020',
-    title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: '/assets/notion.svg',
+    name: 'Freelance (Self employed)',
+    pos: 'Online Computer Science Tutor',
+    duration: 'Seasonal 2020',
+    title:
+      'Taught C++ programming online to high school students, designed assessments, and evaluated progress to enhance learning and retention.',
+    icon: '/assets/tutor.png',
     animation: 'salute',
+  },
+  {
+    id: 4,
+    name: 'Clock Advertising',
+    pos: 'Sales Team Lead',
+    duration: '2019 - 2020',
+    title:
+      'Led a sales team at festivals, promoting products, managing schedules, analyzing performance, providing feedback, and coordinating resources effectively.',
+    icon: '/assets/clock.jpeg',
+    animation: 'salute',
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    name: 'The Modern React Bootcamp (Hooks, Context, NextJS, Router)',
+    pos: 'Udemy',
+    duration: 'In progress',
+    title: 'Technologies: React, React Hooks, Context API, Next.js, React Router, Styled Components, JSS, and more.',
+    icon: '/assets/atom.png',
+  },
+  {
+    id: 1,
+    name: 'React - The Complete Guide 2025 (incl. Next.js, Redux)',
+    pos: 'Udemy',
+    duration: 'In progress',
+    title: 'Technologies: React, Hooks, Redux, React Router, Next.js, Best Practices and way more.',
+    icon: '/assets/atom (2).png',
+  },
+  {
+    id: 1,
+    name: "Typescript: The Complete Developer's Guide",
+    pos: 'Udemy',
+    duration: 'In progress',
+    title: 'Technologies: Typescript, React, Redux, Node.js, Express, MongoDB, and more.',
+    icon: '/assets/typescript.png',
+  },
+  {
+    id: 1,
+    name: 'The Web Developer Bootcamp 2024',
+    pos: 'Udemy',
+    duration: 'Issued Nov 2024',
+    title:
+      'Technologies: HTML, CSS, JavaScript, Node.js, Express, MongoDB, RESTful APIs, Bootstrap, Semantic UI, Authentication, Authorization, and more.',
+    icon: '/assets/web.png',
+  },
+  {
+    id: 2,
+    name: 'CS50x: Introduction to Computer Science',
+    pos: 'Harvard University',
+    duration: 'Issued Nov 2024',
+    title:
+      'Technologies: C, Python, SQL, Algorithms, Data Structures, Cybersecurity, Artificial Intelligence, and more.',
+    icon: '/assets/cs50.png',
+  },
+  {
+    id: 3,
+    name: 'Learn to Code in Python: Programming beginner to advanced',
+    pos: 'Udemy',
+    duration: 'Issued Jan 2025',
+    title: 'Technologies: Python, Object-Oriented Programming, Data Analysis, Web Scraping, Automation, and more.',
+    icon: '/assets/python.png',
+  },
+  {
+    id: 4,
+    name: 'Automate the Boring Stuff with Python Programming',
+    pos: 'Udemy',
+    duration: 'Issued Jan 2023',
+    title: 'Technologies: Python, Web Scraping, Automation, Data Analysis, Regular Expressions, and more.',
+    icon: '/assets/auto.png',
+  },
+  {
+    id: 5,
+    name: 'Arduino Programming and Hardware Fundamentals with Hackster',
+    pos: 'Udemy',
+    duration: 'Issued Nov 2020',
+    title: 'Technologies: Arduino, Electronics, Microcontrollers, Sensors, Actuators, and more.',
+    icon: '/assets/arduino2.png',
+  },
+  {
+    id: 5,
+    name: 'Fundamentals of digital marketing',
+    pos: 'Google',
+    duration: 'Issued May 2022',
+    title: 'Technologies: SEO, SEM, Social Media, Content Marketing, Email Marketing, and more.',
+    icon: '/assets/google.png',
   },
 ];

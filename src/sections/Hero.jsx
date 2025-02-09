@@ -1,8 +1,9 @@
 import { Leva } from 'leva';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, Float, Stars } from '@react-three/drei';
+import { useSpring } from '@react-spring/core';
 
 import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
@@ -13,12 +14,20 @@ import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import { Arduino } from '../components/Arduino.jsx';
+import Atom from '../components/Atom.jsx';
+import Cursor from '../components/Cursor.jsx';
+import Switch from '../components/Switch.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+  const [toggle, set] = useState(0);
+  const [{ x }] = useSpring({ x: toggle, config: { mass: 5, tension: 1000, friction: 50, precision: 0.0001 } }, [
+    toggle,
+  ]);
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
@@ -26,9 +35,9 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Adrian <span className="waving-hand">👋</span>
+          Hi, I am Ionut <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <p className="hero_tag text-gray_gradient">Web Developer</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
@@ -43,10 +52,16 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
+              {/* <Target position={sizes.targetPosition} /> */}
+              <Arduino position={sizes.targetPosition} scale={4} />
+              {/* <ReactLogo position={sizes.reactLogoPosition} /> */}
               <Rings position={sizes.ringPosition} />
-              <Cube position={sizes.cubePosition} />
+              {/* <Cube position={sizes.cubePosition} /> */}
+              <Float speed={4} rotationIntensity={0.5} floatIntensity={2} scale={0.5}>
+                <Atom position={sizes.cubePosition} />
+              </Float>
+              <Stars saturation={0} count={1000} speed={2} />
+              <Switch x={x} set={set} position={sizes.reactLogoPosition} scale={3} rotation={[0.1, -Math.PI, 0]} />
             </group>
 
             <ambientLight intensity={1} />

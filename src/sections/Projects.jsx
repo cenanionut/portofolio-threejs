@@ -58,6 +58,15 @@ const Projects = () => {
                 </div>
               ))}
             </div>
+            {currentProject.github && (
+              <a
+                className="flex items-center gap-2 cursor-pointer text-white-600"
+                href={currentProject.github}
+                target="_blank"
+                rel="noreferrer">
+                <p>Check Github</p>
+              </a>
+            )}
 
             <a
               className="flex items-center gap-2 cursor-pointer text-white-600"
