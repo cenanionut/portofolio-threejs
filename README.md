@@ -1,4 +1,3 @@
-```markdown
 # My Personal Landing Page / Portfolio
 
 Welcome to my personal landing page – a dynamic portfolio that showcases my work through engaging 3D visuals and interactive design. What started as a project based on a tutorial has evolved into a unique, customized experience that represents me and my skills.
@@ -55,4 +54,3 @@ Originally crafted as part of a tutorial, this project has since been transforme
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
