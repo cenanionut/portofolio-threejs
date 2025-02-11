@@ -44,7 +44,7 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             {/* To hide controller */}
-            <Leva hidden />
+            {/* <Leva hidden /> */}
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
@@ -60,7 +60,7 @@ const Hero = () => {
               <Float speed={4} rotationIntensity={0.5} floatIntensity={2} scale={0.5}>
                 <Atom position={sizes.cubePosition} />
               </Float>
-              <Stars saturation={0} count={1000} speed={2} />
+              <Stars saturation={0} count={10000} speed={2} />
               <Switch x={x} set={set} position={sizes.reactLogoPosition} scale={3} rotation={[0.1, -Math.PI, 0]} />
             </group>
 

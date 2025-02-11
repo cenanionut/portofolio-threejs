@@ -25,7 +25,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Ionut Cenan</p>
               <p className="grid-subtext">
-                With three years of experience, I have developed expertise in both frontend and backend development,
+                With three+ years of experience, I have developed expertise in both frontend and backend development,
                 crafting interactive and adaptive websites and applications.
               </p>
             </div>

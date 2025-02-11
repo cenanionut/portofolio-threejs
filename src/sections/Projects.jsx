@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
+import { useMediaQuery } from 'react-responsive';
 
 import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
@@ -12,6 +13,9 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
   const handleNavigation = (direction) => {
     setSelectedProjectIndex((prevIndex) => {
@@ -50,7 +54,7 @@ const Projects = () => {
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
 
-          <div className="flex items-center justify-between flex-wrap gap-5">
+          <div className={`flex items-center  flex-wrap gap-5 ${isSmall ? 'justify-center' : 'justify-between'}`}>
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
                 <div key={index} className="tech-logo">
@@ -58,24 +62,49 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            {currentProject.github && (
-              <a
-                className="flex items-center gap-2 cursor-pointer text-white-600"
-                href={currentProject.github}
-                target="_blank"
-                rel="noreferrer">
-                <p>Check Github</p>
-              </a>
-            )}
+            {isSmall ? (
+              <div className="flex items-center justify-around gap-3" style={{ width: '100%' }}>
+                {currentProject.github && (
+                  <a
+                    className="flex items-center gap-2 cursor-pointer text-white-600"
+                    href={currentProject.github}
+                    target="_blank"
+                    rel="noreferrer">
+                    <p>Check Github</p>
+                  </a>
+                )}
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
+                <a
+                  className="flex items-center gap-2 cursor-pointer text-white-600"
+                  href={currentProject.href}
+                  target="_blank"
+                  rel="noreferrer">
+                  <p>Check Live Site</p>
+                  <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                </a>
+              </div>
+            ) : (
+              <>
+                {currentProject.github && (
+                  <a
+                    className="flex items-center gap-2 cursor-pointer text-white-600"
+                    href={currentProject.github}
+                    target="_blank"
+                    rel="noreferrer">
+                    <p>Check Github</p>
+                  </a>
+                )}
+
+                <a
+                  className="flex items-center gap-2 cursor-pointer text-white-600"
+                  href={currentProject.href}
+                  target="_blank"
+                  rel="noreferrer">
+                  <p>Check Live Site</p>
+                  <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                </a>
+              </>
+            )}
           </div>
 
           <div className="flex justify-between items-center mt-7">
