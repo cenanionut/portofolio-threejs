@@ -9,6 +9,11 @@ const Footer = () => {
             <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
           </div>
         </a>
+        <a href="https://www.linkedin.com/in/cenanionut/" target="_blank" rel="noreferrer">
+          <div className="social-icon">
+            <img src="/assets/linkedin.svg" alt="linkedin" className="w-1/2 h-1/2" />
+          </div>
+        </a>
       </div>
       <p className="text-white-500">© 2025 Ionut Cenan</p>
     </footer>
